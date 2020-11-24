@@ -15,9 +15,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.clientui.beans.AvisBean;
+import com.clientui.beans.PrestationBean;
 import com.clientui.beans.ReclamationBean;
+import com.clientui.beans.ReservationBean;
+import com.clientui.beans.SalonBean;
 import com.clientui.beans.UtilisateurBean;
 import com.clientui.proxies.MicroServiceReclamationProxies;
+import com.clientui.proxies.MicroServiceReservationProxies;
 import com.clientui.proxies.MicroServiceUtilisateurProxies;
 
 @CrossOrigin
@@ -29,6 +33,9 @@ public class ClientController {
 	
 	@Autowired
 	private MicroServiceUtilisateurProxies microServiceUtilisateurProxies;
+	
+	@Autowired
+	private MicroServiceReservationProxies microServiceReservationProxies;
 	
 	//microserviceReclamation - Reclamation
 //	@RequestMapping("/reclamations")
@@ -148,5 +155,93 @@ public class ClientController {
 	@DeleteMapping("/utilisateurs/{id}")
 	void deleteUtilisateur(@PathVariable("id") Long id) {
 		microServiceUtilisateurProxies.deleteUtilisateur(id);
+	}
+	
+	
+	//Reservation
+	
+	@GetMapping("/reservations")
+	public List<ReservationBean> getReservations() {
+		return microServiceReservationProxies.findAllReservation();
+		
+	}
+	
+	@GetMapping("/reservations/{id}")
+	public ReservationBean findProduit(@PathVariable("id") Long id) {
+		return microServiceReservationProxies.findOneReservation(id);
+	}
+	
+	@PostMapping("/reservations")
+	public ReservationBean saveProduit(@RequestBody ReservationBean reservation) {
+		 return microServiceReservationProxies.saveReservation(reservation);
+			
+	}
+	
+	@PutMapping("/reservations/{id}")
+	public ReservationBean updateReservation(@PathVariable("id") long idReservation, @RequestBody ReservationBean reservation) {
+		ReservationBean currentReservation = microServiceReservationProxies.findOneReservation(idReservation);
+		currentReservation.setDateReservation(reservation.getDateReservation());
+		return microServiceReservationProxies.saveReservation(currentReservation);
+
+	}
+	
+	
+	
+	
+	
+	@GetMapping("/prestations")
+	public List<PrestationBean> getPrestations() {
+		return microServiceReservationProxies.findAllPrestation();
+		
+	}
+	
+	@GetMapping("/prestations/{id}")
+	public PrestationBean findPrestation(@PathVariable("id") Long id) {
+		return microServiceReservationProxies.findOnePrestation(id);
+	}
+	
+	@PostMapping("/prestations")
+	public PrestationBean savePrestation(@RequestBody PrestationBean prestation) {
+		 return microServiceReservationProxies.savePrestation(prestation);
+			
+	}
+	
+	@PutMapping("/prestations/{id}")
+	public PrestationBean updatePrestation(@PathVariable("id") long idPrestation, @RequestBody PrestationBean prestation) {
+		PrestationBean currentPrestation = microServiceReservationProxies.findOnePrestation(idPrestation);
+		currentPrestation.setNomPrestation(prestation.getNomPrestation());
+		return microServiceReservationProxies.savePrestation(currentPrestation);
+
+	}
+	
+	
+	
+	
+	@GetMapping("/salons")
+	public List<SalonBean> getSalons() {
+		return microServiceReservationProxies.findAllSalon();
+		
+	}
+	
+	@GetMapping("/salons/{id}")
+	public SalonBean findSalon(@PathVariable("id") Long id) {
+		return microServiceReservationProxies.findOneSalon(id);
+	}
+	
+	@PostMapping("/salons")
+	public SalonBean saveSalon(@RequestBody SalonBean salon) {
+		 return microServiceReservationProxies.saveSalon(salon);
+			
+	}
+	
+	@PutMapping("/salons/{id}")
+	public SalonBean updateSalon(@PathVariable("id") long idSalon, @RequestBody SalonBean salon) {
+		SalonBean currentSalon = microServiceReservationProxies.findOneSalon(idSalon);
+		currentSalon.setNomSalon(salon.getNomSalon());
+		currentSalon.setAdresseSalon(salon.getAdresseSalon());
+		currentSalon.setPhonenumber(salon.getPhonenumber());
+		
+		return microServiceReservationProxies.saveSalon(currentSalon);
+
 	}
 }

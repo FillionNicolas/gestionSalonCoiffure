@@ -31,6 +31,12 @@ public class Prestation implements Serializable{
 		this.reservation = reservation;
 	}
 
+	public Prestation(String nomPrestation) {
+		super();
+		this.nomPrestation = nomPrestation;
+		
+	}
+
 
 	public Prestation() {
 		super();

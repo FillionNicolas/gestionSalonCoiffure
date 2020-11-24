@@ -10,6 +10,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 @Table(name="reservation")
@@ -18,7 +20,9 @@ public class Reservation implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idReservation;
+	@Temporal(TemporalType.DATE)
 	private Date dateReservation;
+
 	
 	@OneToMany(mappedBy = "reservation")
 	private List<Prestation> prestations;
@@ -26,12 +30,16 @@ public class Reservation implements Serializable{
 	@OneToMany(mappedBy = "reservation")
 	private List<Salon> salons;
 
-	public Reservation(Long idReservation, Date dateReservation, List<Prestation> prestations, List<Salon> salons) {
+	public Reservation(Date dateReservation, List<Prestation> prestations, List<Salon> salons) {
 		super();
-		this.idReservation = idReservation;
 		this.dateReservation = dateReservation;
 		this.prestations = prestations;
 		this.salons = salons;
+	}
+	
+	public Reservation(Date dateReservation) {
+		super();
+		this.dateReservation = dateReservation;
 	}
 
 	public Reservation() {

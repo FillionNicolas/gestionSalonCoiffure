@@ -27,8 +27,12 @@
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.DeleteMapping"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PutMapping"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.CrossOrigin"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
     <fullyQualifiedTypeName name="com.clientui.beans.ReclamationBean"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
+    <fullyQualifiedTypeName name="com.clientui.proxies.MicroServiceReservationProxies"/>
+    <fullyQualifiedTypeName name="com.clientui.beans.ReservationBean"/>
+    <fullyQualifiedTypeName name="com.clientui.beans.PrestationBean"/>
+    <fullyQualifiedTypeName name="com.clientui.beans.SalonBean"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.CrossOrigin"/>
 </qualifiedTypeNameHistroy>

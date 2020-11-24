@@ -34,6 +34,12 @@ public class Salon implements Serializable{
 		this.phonenumber = phonenumber;
 		this.reservation = reservation;
 	}
+	
+	public Salon(String nomSalon) {
+		super();
+		this.nomSalon = nomSalon;
+	}
+
 
 	public Salon() {
 		super();

@@ -2,13 +2,13 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="D:\formation java avance\ProjetFinal\saloncoiffure_wk\microservice-gestion-rdv"/>
 			<item value="D:\formation java avance\ProjetFinal\saloncoiffure_wk\microservice-gestionProduit"/>
 			<item value="D:\formation java avance\ProjetFinal\saloncoiffure_wk\zuul-server"/>
 			<item value="D:\formation java avance\ProjetFinal\saloncoiffure_wk\eureka-server"/>
 			<item value="D:\formation java avance\ProjetFinal\saloncoiffure_wk\microservice-reclamation"/>
 			<item value="D:\formation java avance\ProjetFinal\saloncoiffure_wk\clientui"/>
 			<item value="D:\formation java avance\ProjetFinal\saloncoiffure_wk\config-server"/>
-			<item value="D:\formation java avance\ProjetFinal\saloncoiffure_wk\microservice-gestion-rdv"/>
 			<item value="D:\formation java avance\ProjetFinal\saloncoiffure_wk\microservice-utilisateur"/>
 			<item value="D:\formation java avance\ProjetFinal\saloncoiffure_wk\saloncoiffure"/>
 		</list>

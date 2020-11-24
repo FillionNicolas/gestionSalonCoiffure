@@ -3,17 +3,37 @@ package com.mgestion_rdv.service;
 import java.util.List;
 import java.util.Optional;
 
-import com.mgestion_rdv.entity.Reservation;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-public interface ReservationService {
-	//Save & Update
-			public Reservation saveReservation(Reservation reservation);
-			//Delete
-			public void deleteReservationById(Long id);
-			//Find One By Id
-			public Optional<Reservation> findReservationById(Long id);
-			//Get One
-			public Reservation findReservation(Long id);
-			//Find All
-			public List<Reservation> findReservations();
+import com.mgestion_rdv.entity.Reservation;
+import com.mgestion_rdv.repository.ReservationRepository;
+
+
+
+@Service
+public class ReservationService implements IReservationService{
+	@Autowired
+	ReservationRepository reservationRepository;
+
+	@Override
+	public List<Reservation> findAll() {
+		return reservationRepository.findAll();
+	}
+
+	@Override
+	public Optional<Reservation> findOne(Long id) {
+		return reservationRepository.findById(id);
+	}
+
+	@Override
+	public Reservation saveReservation(Reservation reservation) {
+		return reservationRepository.save(reservation);
+	}
+
+	@Override
+	public void deleteReservation(Reservation reservation) {
+		reservationRepository.delete(reservation);
+	}
+
 }
