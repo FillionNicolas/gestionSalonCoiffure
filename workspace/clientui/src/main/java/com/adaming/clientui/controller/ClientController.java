@@ -29,16 +29,41 @@ public class ClientController {
 		return microServiceProduitProxies.findAll();
 		
 	}
-
+	@GetMapping("/commandes")
+	public List<CommandeBean> getCommandes() {
+		return microServiceProduitProxies.findAllCommande();
+	}
+	@GetMapping("/livraisons")
+	public List<LivraisonBean> getLivraisons() {
+		return microServiceProduitProxies.findAllLivraisons();
+	}
+	
 	@GetMapping("/produits/{id}")
 	public ProduitBean findProduit(@PathVariable("id") Long id) {
 		return microServiceProduitProxies.findOne(id);
 	}
+	@GetMapping("/commandes/{id}")
+	public CommandeBean findCommande(@PathVariable("id") Long id) {
+		return microServiceProduitProxies.findOneCommande(id);
+	}
 	
+	@GetMapping("/livraisons/{id}")
+	public LivraisonBean findLivraison(@PathVariable("id") Long id) {
+		return microServiceProduitProxies.findOneLivraisons(id);
+	}
+	
+	@PostMapping("/livraisons")
+	public LivraisonBean saveCommande(@RequestBody LivraisonBean livraison) {
+		 return microServiceProduitProxies.saveLivraison(livraison);
+			
+	}
 	@PostMapping("/produits")
 	public ProduitBean saveProduit(@RequestBody ProduitBean produit) {
 		 return microServiceProduitProxies.saveProduit(produit);
-			
+	}
+	@PostMapping("/commandes")
+	public CommandeBean saveCommande(@RequestBody CommandeBean commande) {
+		 return microServiceProduitProxies.saveCommande(commande);
 	}
 	@PutMapping("/produits/{id}")
 	public ProduitBean updateProduit(@PathVariable("id") long idProduit, @RequestBody ProduitBean produit) {
@@ -50,59 +75,41 @@ public class ClientController {
 		return microServiceProduitProxies.saveProduit(currentProduit);
 
 	}
+	@PutMapping("/commandes/{id}")
+	public CommandeBean updateCommande(@PathVariable("id") long idCommande, @RequestBody CommandeBean commande) {
+		CommandeBean currentCommande = microServiceProduitProxies.findOneCommande(idCommande);
+		currentCommande.setDateAchat(commande.getDateAchat());
+		currentCommande.setLivraison(commande.getLivraison());
+		currentCommande.setPrix(commande.getPrix());
+		currentCommande.setProduits(commande.getProduits());
+		return microServiceProduitProxies.saveCommande(currentCommande);
+
+	}
+	
+	@PutMapping("/livraisons/{id}")
+	public LivraisonBean updateLivraison(@PathVariable("id") long idLivraison, @RequestBody LivraisonBean livraison) {
+		LivraisonBean currentLivraison = microServiceProduitProxies.findOneLivraisons(idLivraison);
+		currentLivraison.setAdresse(livraison.getAdresse());
+		currentLivraison.setCommandes(livraison.getCommandes());
+		currentLivraison.setLivraisonDate(livraison.getLivraisonDate());
+		return microServiceProduitProxies.saveLivraison(currentLivraison);
+
+	}
 	
 	@DeleteMapping("/produits/{id}")
 	void deleteProduit(@PathVariable("id") Long id) {
 		microServiceProduitProxies.deleteProduit(id);
-	
-	}
-	
-	@GetMapping("/commandes")
-	public List<CommandeBean> getCommandes() {
-		return microServiceProduitProxies.findAllCommande();
-		
-	}
-
-	@GetMapping("/commandes/{id}")
-	public CommandeBean findCommande(@PathVariable("id") Long id) {
-		return microServiceProduitProxies.findOneCommande(id);
-	}
-	
-	@PostMapping("/commandes")
-	public CommandeBean saveCommande(@RequestBody CommandeBean commande) {
-		 return microServiceProduitProxies.saveCommande(commande);
-			
-	}
-
+		}
 	@DeleteMapping("/commandes/{id}")
 	void deleteCommande(@PathVariable("id") Long id) {
 		microServiceProduitProxies.deleteCommande(id);
+		}
 	
-	}
-	
-	@GetMapping("/livraisons")
-	public List<LivraisonBean> getLivraisons() {
-		return microServiceProduitProxies.findAllLivraisons();
-		
-	}
-
-	@GetMapping("/livraisons/{id}")
-	public LivraisonBean findLivraison(@PathVariable("id") Long id) {
-		return microServiceProduitProxies.findOneLivraisons(id);
-	}
-	
-	@PostMapping("/livraisons")
-	public LivraisonBean saveCommande(@RequestBody LivraisonBean livraison) {
-		 return microServiceProduitProxies.saveLivraison(livraison);
-			
-	}
-
 	@DeleteMapping("/livraisons/{id}")
 	void deleteLivraison(@PathVariable("id") Long id) {
 		microServiceProduitProxies.deleteLivraison(id);
 	
 	}
 	
-
 
 }
