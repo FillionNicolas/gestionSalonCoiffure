@@ -9924,3 +9924,117 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact org.springfra
 2020-11-24 13:22:01,632 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\IN-TL-0037\Documents\ProjetFinalV4\workspace\clientui\src\test\resources
 2020-11-24 14:06:42,902 [Worker-43: Launching clientui - MicroserviceClientuiApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2020-11-24 14:06:42,903 [Worker-43: Launching clientui - MicroserviceClientuiApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-11-24 14:06:42,904 [Worker-43: Launching clientui - MicroserviceClientuiApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-11-24 14:06:42,906 [Worker-43: Launching clientui - MicroserviceClientuiApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-24 14:06:42,906 [Worker-43: Launching clientui - MicroserviceClientuiApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\IN-TL-0037\Documents\ProjetFinalV4\workspace\clientui\src\test\resources
+2020-11-24 14:24:02,059 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-24 14:24:02,064 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-11-24 14:24:02,065 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-11-24 14:24:02,070 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-24 14:24:02,070 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\IN-TL-0037\Documents\ProjetFinalV4\workspace\microservice-gestionProduit\src\test\resources
+2020-11-24 14:29:01,779 [Worker-56: Periodic workspace save.] ERROR o.e.m.c.i.p.r.ProjectRegistryReader - Can't write workspace state
+java.io.IOException: Espace insuffisant sur le disque
+	at java.base/java.io.FileOutputStream.writeBytes(Native Method)
+	at java.base/java.io.FileOutputStream.write(FileOutputStream.java:347)
+	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:81)
+	at java.base/java.io.BufferedOutputStream.write(BufferedOutputStream.java:127)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.drain(ObjectOutputStream.java:1893)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.setBlockDataMode(ObjectOutputStream.java:1802)
+	at java.base/java.io.ObjectOutputStream.writeNonProxyDesc(ObjectOutputStream.java:1295)
+	at java.base/java.io.ObjectOutputStream.writeClassDesc(ObjectOutputStream.java:1240)
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1436)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1187)
+	at java.base/java.io.ObjectOutputStream.writeFatalException(ObjectOutputStream.java:1609)
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:356)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryReader.writeWorkspaceState(ProjectRegistryReader.java:171)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.writeWorkspaceState(ProjectRegistryManager.java:995)
+	at org.eclipse.m2e.core.internal.MavenPluginActivator$1.saving(MavenPluginActivator.java:147)
+	at org.eclipse.core.internal.resources.SaveManager.executeLifecycle(SaveManager.java:387)
+	at org.eclipse.core.internal.resources.SaveManager$1.run(SaveManager.java:204)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.resources.SaveManager.broadcastLifecycle(SaveManager.java:207)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1164)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1143)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:55)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2020-11-24 14:29:59,603 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-24 14:29:59,604 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-11-24 14:29:59,605 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-11-24 14:29:59,609 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-24 14:29:59,609 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\IN-TL-0037\Documents\ProjetFinalV4\workspace\microservice-gestionProduit\src\test\resources
+2020-11-24 14:31:31,669 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-24 14:31:31,670 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-11-24 14:31:31,670 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-11-24 14:31:31,673 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-24 14:31:31,673 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\IN-TL-0037\Documents\ProjetFinalV4\workspace\microservice-gestionProduit\src\test\resources
+2020-11-24 14:31:37,163 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-24 14:31:37,164 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-11-24 14:31:37,165 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-11-24 14:31:37,166 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-24 14:31:37,167 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\IN-TL-0037\Documents\ProjetFinalV4\workspace\microservice-gestionProduit\src\test\resources
+2020-11-24 14:31:45,721 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-24 14:31:45,723 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-11-24 14:31:45,723 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-11-24 14:31:45,725 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-24 14:31:45,725 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\IN-TL-0037\Documents\ProjetFinalV4\workspace\microservice-gestionProduit\src\test\resources
+2020-11-24 14:46:34,559 [Worker-62: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-24 14:46:34,560 [Worker-62: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-11-24 14:46:34,561 [Worker-62: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-11-24 14:46:34,563 [Worker-62: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-24 14:46:34,563 [Worker-62: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\IN-TL-0037\Documents\ProjetFinalV4\workspace\microservice-gestionProduit\src\test\resources
+2020-11-24 14:46:41,510 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-24 14:46:41,511 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-11-24 14:46:41,512 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-11-24 14:46:41,516 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-24 14:46:41,517 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\IN-TL-0037\Documents\ProjetFinalV4\workspace\microservice-gestionProduit\src\test\resources
+2020-11-24 14:46:49,841 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-24 14:46:49,844 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-11-24 14:46:49,845 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-11-24 14:46:49,848 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-24 14:46:49,850 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\IN-TL-0037\Documents\ProjetFinalV4\workspace\microservice-gestionProduit\src\test\resources
+2020-11-24 15:46:48,107 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-11-24 15:49:44,265 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-24 15:49:44,274 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-11-24 15:49:44,275 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-11-24 15:49:44,282 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-24 15:49:44,283 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\IN-TL-0037\Documents\ProjetFinalV4\workspace\microservice-gestionProduit\src\test\resources
+2020-11-24 15:50:17,616 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-24 15:50:17,619 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-11-24 15:50:17,620 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-11-24 15:50:17,623 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-24 15:50:17,623 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\IN-TL-0037\Documents\ProjetFinalV4\workspace\microservice-gestionProduit\src\test\resources
+2020-11-24 15:50:42,213 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-24 15:50:42,214 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-11-24 15:50:42,215 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-11-24 15:50:42,217 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-24 15:50:42,217 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\IN-TL-0037\Documents\ProjetFinalV4\workspace\microservice-gestionProduit\src\test\resources
+2020-11-24 15:52:45,481 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-24 15:52:45,483 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-11-24 15:52:45,485 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-11-24 15:52:45,488 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-24 15:52:45,488 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\IN-TL-0037\Documents\ProjetFinalV4\workspace\microservice-gestionProduit\src\test\resources
+2020-11-24 15:53:01,385 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-24 15:53:01,385 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-11-24 15:53:01,386 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-11-24 15:53:01,391 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-24 15:53:01,392 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\IN-TL-0037\Documents\ProjetFinalV4\workspace\microservice-gestionProduit\src\test\resources
+2020-11-24 15:53:16,288 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-24 15:53:16,291 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-11-24 15:53:16,292 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-11-24 15:53:16,294 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-24 15:53:16,295 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\IN-TL-0037\Documents\ProjetFinalV4\workspace\microservice-gestionProduit\src\test\resources
+2020-11-24 15:53:32,865 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-24 15:53:32,866 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-11-24 15:53:32,866 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-11-24 15:53:32,869 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-24 15:53:32,869 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\IN-TL-0037\Documents\ProjetFinalV4\workspace\microservice-gestionProduit\src\test\resources
+2020-11-24 15:56:55,570 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-24 15:56:55,571 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-11-24 15:56:55,573 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-11-24 15:56:55,576 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-24 15:56:55,577 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\IN-TL-0037\Documents\ProjetFinalV4\workspace\microservice-gestionProduit\src\test\resources
+2020-11-24 15:58:25,476 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-24 15:58:25,477 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-11-24 15:58:25,477 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-11-24 15:58:25,484 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-24 15:58:25,484 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\IN-TL-0037\Documents\ProjetFinalV4\workspace\microservice-gestionProduit\src\test\resources

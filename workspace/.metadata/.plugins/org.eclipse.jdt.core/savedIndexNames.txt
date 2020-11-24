@@ -2,8 +2,8 @@ INDEX VERSION 1.131+C:\Users\IN-TL-0037\Documents\ProjetFinalV4\workspace\.metad
 2557934799.index
 1911393605.index
 514747515.index
-935426411.index
 748430207.index
+935426411.index
 3414963680.index
 142986609.index
 4074328836.index
@@ -76,8 +76,8 @@ INDEX VERSION 1.131+C:\Users\IN-TL-0037\Documents\ProjetFinalV4\workspace\.metad
 541190466.index
 346428586.index
 1655328265.index
-1548010854.index
 675447028.index
+1548010854.index
 3981447225.index
 2858588596.index
 1995509409.index
@@ -90,8 +90,8 @@ INDEX VERSION 1.131+C:\Users\IN-TL-0037\Documents\ProjetFinalV4\workspace\.metad
 4193040166.index
 2304101624.index
 922520110.index
-218616006.index
 2827860373.index
+218616006.index
 2461503951.index
 1684545676.index
 141917653.index
@@ -166,8 +166,8 @@ INDEX VERSION 1.131+C:\Users\IN-TL-0037\Documents\ProjetFinalV4\workspace\.metad
 4038242786.index
 586161099.index
 4189586419.index
-1698827149.index
 1793089850.index
+1698827149.index
 3960090063.index
 1513576138.index
 1151909969.index
@@ -178,9 +178,9 @@ INDEX VERSION 1.131+C:\Users\IN-TL-0037\Documents\ProjetFinalV4\workspace\.metad
 2701493047.index
 467423949.index
 3702922490.index
-3418643144.index
-3729534844.index
 774654423.index
+3729534844.index
+3418643144.index
 91599165.index
 4083357162.index
 2464049709.index
