@@ -1,0 +1,16 @@
+package com.mreclamation.service;
+
+import java.util.List;
+
+import com.mreclamation.entities.Avis;
+
+public interface IAvisService {
+
+	List<Avis> findAll();
+
+	Avis findOne(Long idAvis);
+
+	Avis save(Avis avis);
+
+	void delete(Long idAvis);
+}

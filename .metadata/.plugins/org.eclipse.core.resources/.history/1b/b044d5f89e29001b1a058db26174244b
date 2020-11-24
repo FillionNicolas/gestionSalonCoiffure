@@ -1,0 +1,5 @@
+package com.mutilisateur.entity;
+
+public class Utilisateur {
+
+}

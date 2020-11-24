@@ -1,0 +1,22 @@
+package com.clientui.proxies;
+
+import java.util.List;
+
+import org.springframework.cloud.netflix.ribbon.RibbonClient;
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.clientui.beans.AvisBean;
+import com.clientui.beans.ReclamationBean;
+
+@FeignClient(name="microservice-reclamation")
+@RibbonClient(name= "microservice-reclamation")
+public interface MicroServiceReclamationProxies {
+	
+	@GetMapping(value="/reclamation")
+	List<ReclamationBean> findAllReclamation();
+	
+	@GetMapping(value="/avis")
+	List<AvisBean> findAllAvis();
+
+}

@@ -1,0 +1,22 @@
+package com.mreclamation.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.mreclamation.entities.Reclamation;
+import com.mreclamation.repositories.ReclamationRepository;
+import com.mreclamation.service.IReclamationService;
+
+@Service
+public class ReclamationServiceImpl implements IReclamationService{
+	
+	@Autowired
+	ReclamationRepository reclamationRepository;
+
+	@Override
+	public Reclamation save(Reclamation reclamation) {
+		return reclamationRepository.save(reclamation);
+	}
+
+
+}

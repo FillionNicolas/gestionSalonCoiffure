@@ -1,0 +1,9 @@
+package com.mreclamation.service;
+
+import com.mreclamation.entities.Reclamation;
+
+public interface ReclamationService {
+
+	Reclamation save(Reclamation reclamation);
+
+}

@@ -1,0 +1,23 @@
+package com.mreclamation.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.mreclamation.entities.Reclamation;
+import com.mreclamation.service.IReclamationService;
+
+@RestController
+public class ReclamationController {
+	
+	@Autowired
+	IReclamationService reclamationService;
+	
+	@PostMapping("/reclamation")
+	public Reclamation saveReclamation(@RequestBody Reclamation reclamation) {
+		return reclamationService.save(reclamation);
+	}
+	
+
+}

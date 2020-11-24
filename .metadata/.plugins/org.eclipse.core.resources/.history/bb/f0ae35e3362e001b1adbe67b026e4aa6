@@ -1,0 +1,45 @@
+package com.clientui.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.clientui.beans.AvisBean;
+import com.clientui.beans.ReclamationBean;
+import com.clientui.beans.UtilisateurBean;
+import com.clientui.proxies.MicroServiceReclamationProxies;
+import com.clientui.proxies.MicroServiceUtilisateurProxies;
+
+@RestController
+public class ClientController {
+	
+	@Autowired
+	private MicroServiceReclamationProxies microServiceReclamationProxies;
+	
+	@Autowired
+	private MicroServiceUtilisateurProxies microServiceUtilisateurProxies;
+	
+	@RequestMapping("/avis")
+	public String avis(Model model) {
+		List<AvisBean> avis = microServiceReclamationProxies.findAllAvis();
+		model.addAttribute("avis", avis);
+		return "Avis";
+	}
+	
+	@RequestMapping("/reclamation")
+	public String reclamation(Model model) {
+		List<ReclamationBean> reclamation = microServiceReclamationProxies.findAllReclamation();
+		model.addAttribute("reclamation", reclamation);
+		return "Reclamation";
+	}
+	
+	@RequestMapping("/utilisateur")
+	public String utilisateur(Model model) {
+		List<UtilisateurBean> utilisateur = microServiceUtilisateurProxies.findAllUtilisateur();
+		model.addAttribute("utilisateur", utilisateur);
+		return "Utilisateur";
+	}
+}

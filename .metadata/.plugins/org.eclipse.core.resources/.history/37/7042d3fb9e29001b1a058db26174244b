@@ -1,0 +1,23 @@
+package com.mutilisateur.entity;
+
+//utilisé l'import Date celui de java.util et non sql
+import java.util.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
+public class Utilisateur {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long idUtilisateur;
+	private String nomUtilisateur;
+	private String prenomUtilisateur;
+	private String loginUtilisateur;
+	private String passwordUtilisateur;
+	private Date dateNaissanceUtilisateur;
+	private Long numeroTelephoneUtilisateur;
+	private String villeUtilisateur;
+	private String adresseUtilisateur;
+}

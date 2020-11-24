@@ -1,0 +1,6 @@
+#Pour que notre serveur fonctionne, nous avons besoin de li indiquer
+#où aller chercher les fichiers de configuration pour les servir
+#ensuite à nos Microservices
+spring.application.name=config-server
+server.port:9101
+spring.cloud.config.server.git.uri=https://github.com/adaming-laurent/saloncoiffure-config-repo.git

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="D:\formation java avance\ProjetFinal\saloncoiffure_wk\microservice-gestionProduit"/>
+			<item value="D:\formation java avance\ProjetFinal\saloncoiffure_wk\zuul-server"/>
+			<item value="D:\formation java avance\ProjetFinal\saloncoiffure_wk\eureka-server"/>
+			<item value="D:\formation java avance\ProjetFinal\saloncoiffure_wk\microservice-reclamation"/>
+			<item value="D:\formation java avance\ProjetFinal\saloncoiffure_wk\clientui"/>
+			<item value="D:\formation java avance\ProjetFinal\saloncoiffure_wk\config-server"/>
+			<item value="D:\formation java avance\ProjetFinal\saloncoiffure_wk\microservice-gestion-rdv"/>
+			<item value="D:\formation java avance\ProjetFinal\saloncoiffure_wk\microservice-utilisateur"/>
+			<item value="D:\formation java avance\ProjetFinal\saloncoiffure_wk\saloncoiffure"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>
