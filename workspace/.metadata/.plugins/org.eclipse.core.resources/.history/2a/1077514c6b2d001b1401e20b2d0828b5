@@ -1,0 +1,18 @@
+server.port=9090
+spring.datasource.url=jdbc:mysql://localhost:3306/gestion_salon_coiffure?createDatabaseIfNotExist=true
+spring.datasource.username=root
+spring.datasource.password=
+spring.datasource.driverClassName=com.mysql.jdbc.Driver
+spring.jpa.hibernate.ddl-auto=create
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL5Dialect
+
+#TODO : if eureka  ON -> true
+
+#eureka.client.register-with-eureka=true
+#eureka.client.fetch-registry=true
+
+spring.application.name=microservice-gestionProduit
+spring.cloud.config.uri=http://localhost:9101/
+
+
+

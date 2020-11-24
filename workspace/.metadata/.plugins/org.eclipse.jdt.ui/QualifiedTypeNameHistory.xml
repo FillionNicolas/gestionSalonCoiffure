@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.mgestionProduit.services.ICommandeService"/>
+    <fullyQualifiedTypeName name="com.adaming.microserviceproduit.services.ICommandeService"/>
+    <fullyQualifiedTypeName name="com.adaming.microserviceproduit.repositories.ICommandeRepository"/>
+    <fullyQualifiedTypeName name="com.adaming.microserviceproduit.entites.Commande"/>
+    <fullyQualifiedTypeName name="com.adaming.microserviceproduit.repositories.ILivraisonRepository"/>
+    <fullyQualifiedTypeName name="com.adaming.microserviceproduit.repositories.IProduitRepository"/>
+    <fullyQualifiedTypeName name="com.adaming.microserviceproduit.services.ILivraisonService"/>
+    <fullyQualifiedTypeName name="com.adaming.microserviceproduit.entites.Livraison"/>
+    <fullyQualifiedTypeName name="com.adaming.microserviceproduit.services.IProduitService"/>
+    <fullyQualifiedTypeName name="com.adaming.microserviceproduit.entites.Produit"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="org.springframework.cloud.client.discovery.EnableDiscoveryClient"/>
+    <fullyQualifiedTypeName name="javax.persistence.Column"/>
+    <fullyQualifiedTypeName name="javax.persistence.JoinColumn"/>
+    <fullyQualifiedTypeName name="javax.persistence.Table"/>
+</qualifiedTypeNameHistroy>

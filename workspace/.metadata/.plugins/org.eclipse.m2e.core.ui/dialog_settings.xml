@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\IN-TL-0037\Documents\projetFinalV4\microservice-produit"/>
+			<item value="C:\Users\IN-TL-0037\Documents\projetFinalV4\microservice-zuul-server"/>
+			<item value="C:\Users\IN-TL-0037\Documents\projetFinalV4\microservice-gestionProduit"/>
+			<item value="C:\Users\IN-TL-0037\Documents\projetFinalV4\microservice-eureka-server"/>
+			<item value="C:\Users\IN-TL-0037\Documents\projetFinalV4\microservice-config-serveur"/>
+			<item value="C:\Users\IN-TL-0037\Documents\projetFinalV4\microservice-clientui"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>

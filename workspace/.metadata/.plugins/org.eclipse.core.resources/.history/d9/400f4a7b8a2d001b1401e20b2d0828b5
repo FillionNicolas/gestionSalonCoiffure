@@ -1,0 +1,4 @@
+spring.application.name=microservice-config-serveur
+server.port=9101
+spring.cloud.config.server.git.uri=https://github.com/louisePrat/config-serveur-projetFinal.git
+

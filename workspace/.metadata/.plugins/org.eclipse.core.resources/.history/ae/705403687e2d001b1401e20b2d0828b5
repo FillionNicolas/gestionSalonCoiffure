@@ -1,0 +1,98 @@
+package com.mgestionProduit.entites;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+
+
+@Entity
+public class Commande implements Serializable {
+	
+	private static final long serialVersionUID = 1L;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id_produit")
+	private Long idCommande;
+	
+	@Column(name = "date_achat")
+	private Date dateAchat;
+	private float prix;
+	
+	@ManyToOne
+	private Long idLivraison;
+	
+	@OneToMany(mappedBy = "commande")
+	private List<Produit> produits=new ArrayList<>();
+	
+	public Commande() {}
+
+	
+
+	public Long getIdCommande() {
+		return idCommande;
+	}
+
+	public void setIdCommande(Long idCommande) {
+		this.idCommande = idCommande;
+	}
+
+	public Date getDateAchat() {
+		return dateAchat;
+	}
+
+	public void setDateAchat(Date dateAchat) {
+		this.dateAchat = dateAchat;
+	}
+	
+
+	public float getPrix() {
+		return prix;
+	}
+
+	public void setPrix(float prix) {
+		this.prix = prix;
+	}
+
+	public Livraison getLivraison() {
+		return livraison;
+	}
+
+	public void setLivraison(Livraison livraison) {
+		this.livraison = livraison;
+	}
+
+	public List<Produit> getProduits() {
+		return produits;
+	}
+
+	public void setProduits(List<Produit> produits) {
+		this.produits = produits;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+
+
+	@Override
+	public String toString() {
+		return "Commande [idCommande=" + idCommande + ", dateAchat=" + dateAchat + ", prix=" + prix + ", produits=" + produits + "]";
+	}
+	
+	
+
+
+
+
+	
+}
