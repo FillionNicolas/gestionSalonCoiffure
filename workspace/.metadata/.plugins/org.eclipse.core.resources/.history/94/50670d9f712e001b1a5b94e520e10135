@@ -1,5 +1,0 @@
-package com.mgestionProduit.mapper;
-
-public interface ILivraisonDTO {
-
-}
