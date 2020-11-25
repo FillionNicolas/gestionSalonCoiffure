@@ -15,6 +15,7 @@ public class CommandeDTO {
 
 	private float prix;
 	
+	private long idUtilisateur;
 	
 	private Livraison livraison;
 	
@@ -24,14 +25,21 @@ public class CommandeDTO {
 	public CommandeDTO() {}
 
 	
-	public CommandeDTO(Long idCommande, Date dateAchat, float prix, Livraison livraison, List<Produit> produits) {
+
+
+	public CommandeDTO(Long idCommande, Date dateAchat, float prix, long idUtilisateur, Livraison livraison,
+			List<Produit> produits) {
 		super();
 		this.idCommande = idCommande;
 		this.dateAchat = dateAchat;
 		this.prix = prix;
+		this.idUtilisateur = idUtilisateur;
 		this.livraison = livraison;
 		this.produits = produits;
 	}
+
+
+
 
 	public Long getIdCommande() {
 		return idCommande;
@@ -75,13 +83,30 @@ public class CommandeDTO {
 
 
 
-	public String toString() {
-		return "Commande [idCommande=" + idCommande + ", dateAchat=" + dateAchat + ", prix=" + prix + ", livraison="
-				+ livraison + ", produits=" + produits + ", getIdCommande()=" + getIdCommande() + ", getDateAchat()="
-				+ getDateAchat() + ", getPrix()=" + getPrix() + ", getLivraison()=" + getLivraison()
-				+ ", getProduits()=" + getProduits() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
-				+ ", toString()=" + super.toString() + "]";
+
+	public long getIdUtilisateur() {
+		return idUtilisateur;
 	}
+
+
+
+
+	public void setIdUtilisateur(long idUtilisateur) {
+		this.idUtilisateur = idUtilisateur;
+	}
+
+
+
+
+
+	public String toString() {
+		return "CommandeDTO [idCommande=" + idCommande + ", dateAchat=" + dateAchat + ", prix=" + prix
+				+ ", idUtilisateur=" + idUtilisateur + ", livraison=" + livraison + ", produits=" + produits + "]";
+	}
+
+
+
+	
 
 
 }

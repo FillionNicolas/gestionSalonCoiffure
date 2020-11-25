@@ -29,6 +29,8 @@ public class Commande implements Serializable {
 
 	private float prix;
 	
+	private long idUtilisateur;
+	
 	
 	@ManyToOne
 	private Livraison livraison;
@@ -40,7 +42,7 @@ public class Commande implements Serializable {
 
 	
 
-	public Commande(Long idCommande, Date dateAchat, float prix, Livraison livraison, List<Produit> produits) {
+	public Commande(Long idCommande, Date dateAchat, float prix, Livraison livraison, List<Produit> produits, long idUtilisateur) {
 		super();
 		this.idCommande = idCommande;
 		this.dateAchat = dateAchat;
@@ -103,14 +105,27 @@ public class Commande implements Serializable {
 
 
 
+	public long getIdUtilisateur() {
+		return idUtilisateur;
+	}
+
+
+
+	public void setIdUtilisateur(long idUtilisateur) {
+		this.idUtilisateur = idUtilisateur;
+	}
+
+
+
 	@Override
 	public String toString() {
-		return "Commande [idCommande=" + idCommande + ", dateAchat=" + dateAchat + ", prix=" + prix + ", livraison="
-				+ livraison + ", produits=" + produits + ", getIdCommande()=" + getIdCommande() + ", getDateAchat()="
-				+ getDateAchat() + ", getPrix()=" + getPrix() + ", getLivraison()=" + getLivraison()
-				+ ", getProduits()=" + getProduits() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
-				+ ", toString()=" + super.toString() + "]";
+		return "Commande [idCommande=" + idCommande + ", dateAchat=" + dateAchat + ", prix=" + prix + ", idUtilisateur="
+				+ idUtilisateur + ", livraison=" + livraison + ", produits=" + produits + "]";
 	}
+
+
+	
+
 
 
 

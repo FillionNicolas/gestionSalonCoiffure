@@ -18,6 +18,8 @@ public class CommandeBean {
 
 	private float prix;
 	
+	private long idUilisateur;
+	
 
 	@ManyToOne
 	private LivraisonBean livraison;
@@ -31,14 +33,22 @@ public class CommandeBean {
 
 	
 
-	public CommandeBean(Long idCommande, Date dateAchat, float prix, LivraisonBean livraison, List<ProduitBean> produits) {
+
+
+	public CommandeBean(Long idCommande, Date dateAchat, float prix, long idUilisateur, LivraisonBean livraison,
+			List<ProduitBean> produits) {
 		super();
 		this.idCommande = idCommande;
 		this.dateAchat = dateAchat;
 		this.prix = prix;
+		this.idUilisateur = idUilisateur;
 		this.livraison = livraison;
 		this.produits = produits;
 	}
+
+
+
+
 
 
 
@@ -94,11 +104,37 @@ public class CommandeBean {
 
 
 
+	public long getIdUilisateur() {
+		return idUilisateur;
+	}
+
+
+
+
+
+
+
+	public void setIdUilisateur(long idUilisateur) {
+		this.idUilisateur = idUilisateur;
+	}
+
+
+
+
+
+
+
 	@Override
 	public String toString() {
-		return "CommandeBean [idCommande=" + idCommande + ", dateAchat=" + dateAchat + ", prix=" + prix + ", livraison="
-				+ livraison + ", produits=" + produits + "]";
+		return "CommandeBean [idCommande=" + idCommande + ", dateAchat=" + dateAchat + ", prix=" + prix
+				+ ", idUilisateur=" + idUilisateur + ", livraison=" + livraison + ", produits=" + produits + "]";
 	}
+
+
+
+
+
+
 
 
 

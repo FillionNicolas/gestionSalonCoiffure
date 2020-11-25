@@ -61,6 +61,7 @@ public class CommandeController {
 		currentCommande.setLivraison(commande.getLivraison());
 		currentCommande.setPrix(commande.getPrix());
 		currentCommande.setProduits(commande.getProduits());
+		currentCommande.setIdUtilisateur(commande.getIdUtilisateur());
 		
 		return commandeMapper.convertToCommandeDto(commandeService.saveCommade(currentCommande));
 	}
