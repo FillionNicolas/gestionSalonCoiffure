@@ -4,9 +4,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-
 import com.mgestionProduit.entites.Livraison;
 import com.mgestionProduit.entites.Produit;
 
@@ -18,16 +15,15 @@ public class CommandeDTO {
 
 	private float prix;
 	
-	@ManytoOne
+	
 	private Livraison livraison;
 	
-	@OneToMany(mappedBy = "commande")
+	
 	private List<Produit> produits=new ArrayList<>();
 	
 	public CommandeDTO() {}
 
 	
-
 	public CommandeDTO(Long idCommande, Date dateAchat, float prix, Livraison livraison, List<Produit> produits) {
 		super();
 		this.idCommande = idCommande;
@@ -78,7 +74,7 @@ public class CommandeDTO {
 	}
 
 
-	@Override
+
 	public String toString() {
 		return "Commande [idCommande=" + idCommande + ", dateAchat=" + dateAchat + ", prix=" + prix + ", livraison="
 				+ livraison + ", produits=" + produits + ", getIdCommande()=" + getIdCommande() + ", getDateAchat()="

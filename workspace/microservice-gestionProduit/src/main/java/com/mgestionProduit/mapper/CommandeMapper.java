@@ -1,0 +1,29 @@
+package com.mgestionProduit.mapper;
+
+import org.modelmapper.ModelMapper;
+import org.modelmapper.convention.MatchingStrategies;
+import org.springframework.stereotype.Component;
+
+import com.mgestionProduit.dto.CommandeDTO;
+import com.mgestionProduit.entites.Commande;
+
+@Component
+public class CommandeMapper implements ICommandeMapper {
+
+	ModelMapper modelMapper = new ModelMapper();
+	
+	@Override
+	public CommandeDTO convertToCommandeDto(Commande commande) {
+		modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.LOOSE);
+		CommandeDTO commandeDTO = modelMapper.map(commande, CommandeDTO.class);
+		return commandeDTO;
+	}
+
+	@Override
+	public Commande convertToCommande(CommandeDTO commandeDTO) {
+		modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.LOOSE);
+		Commande commande = modelMapper.map(commandeDTO, Commande.class);
+		return commande;
+	}
+
+}

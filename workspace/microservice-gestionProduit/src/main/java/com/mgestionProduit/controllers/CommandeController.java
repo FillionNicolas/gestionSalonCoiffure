@@ -3,6 +3,7 @@ package com.mgestionProduit.controllers;
 
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -14,7 +15,9 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.mgestionProduit.dto.CommandeDTO;
 import com.mgestionProduit.entites.Commande;
+import com.mgestionProduit.mapper.ICommandeMapper;
 import com.mgestionProduit.services.ICommandeService;
 
 @CrossOrigin
@@ -24,20 +27,25 @@ public class CommandeController {
 	@Autowired
 	 ICommandeService commandeService;
 	
+	@Autowired
+	ICommandeMapper commandeMapper;
+	
 	@GetMapping("/commandes")
-	public List<Commande> findAll(){
-		return commandeService.getCommandes();
+	public List<CommandeDTO> findAll(){
+		return (List<CommandeDTO>)commandeService.getCommandes().stream().map(e->commandeMapper.convertToCommandeDto(e))
+					.collect(Collectors.toList());
 	}
 	
 	@GetMapping("/commandes/{id}")
-	public Commande findOne(@PathVariable("id") Long id) {
-		return commandeService.getCommande(id);
+	public CommandeDTO findOne(@PathVariable("id") Long id) {
+		return commandeMapper.convertToCommandeDto(
+				commandeService.getCommande(id));
 		
 	}
 	
 	@PostMapping("/commandes")
-	public Commande saveOrUpdate(@RequestBody Commande commande) {
-		return commandeService.saveCommade(commande);
+	public CommandeDTO saveOrUpdate(@RequestBody Commande commande) {
+		return commandeMapper.convertToCommandeDto(commandeService.saveCommade(commande));
 	}
 	
 	@DeleteMapping("/commandes/{id}")
@@ -45,14 +53,16 @@ public class CommandeController {
 		commandeService.deleteCommande(id);
 	}
 	
+	
 	@PutMapping("/commandes/{id}")
-	public Commande updateCommande(@RequestBody Commande commande , @PathVariable("id")Long id ) {
+	public CommandeDTO updateCommande(@RequestBody Commande commande , @PathVariable("id") Long id ) {
 		Commande currentCommande = commandeService.getCommande(id);
 		currentCommande.setDateAchat(commande.getDateAchat());
 		currentCommande.setLivraison(commande.getLivraison());
 		currentCommande.setPrix(commande.getPrix());
 		currentCommande.setProduits(commande.getProduits());
-		return commandeService.saveCommade(currentCommande);
+		
+		return commandeMapper.convertToCommandeDto(commandeService.saveCommade(currentCommande));
 	}
 
 

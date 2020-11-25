@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.mgestionProduit.services.ICommandeService"/>
     <fullyQualifiedTypeName name="com.adaming.microserviceproduit.services.ICommandeService"/>
     <fullyQualifiedTypeName name="com.adaming.microserviceproduit.repositories.ICommandeRepository"/>
     <fullyQualifiedTypeName name="com.adaming.microserviceproduit.entites.Commande"/>
@@ -10,11 +9,28 @@
     <fullyQualifiedTypeName name="com.adaming.microserviceproduit.entites.Livraison"/>
     <fullyQualifiedTypeName name="com.adaming.microserviceproduit.services.IProduitService"/>
     <fullyQualifiedTypeName name="com.adaming.microserviceproduit.entites.Produit"/>
-    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="org.springframework.cloud.client.discovery.EnableDiscoveryClient"/>
     <fullyQualifiedTypeName name="javax.persistence.Column"/>
     <fullyQualifiedTypeName name="javax.persistence.JoinColumn"/>
     <fullyQualifiedTypeName name="javax.persistence.Table"/>
     <fullyQualifiedTypeName name="com.adaming.clientui.beans.LivraisonBean"/>
+    <fullyQualifiedTypeName name="com.mgestionProduit.entites.Produit"/>
+    <fullyQualifiedTypeName name="com.mgestionProduit.entites.Commande"/>
     <fullyQualifiedTypeName name="com.mgestionProduit.entites.Livraison"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
+    <fullyQualifiedTypeName name="org.modelmapper.ModelMapper"/>
+    <fullyQualifiedTypeName name="org.modelmapper.convention.MatchingStrategies"/>
+    <fullyQualifiedTypeName name="com.mgestionProduit.services.ICommandeService"/>
+    <fullyQualifiedTypeName name="com.mgestionProduit.mapper.ICommandeMapper"/>
+    <fullyQualifiedTypeName name="java.util.stream.Collector"/>
+    <fullyQualifiedTypeName name="com.mgestionProduit.dto.CommandeDTO"/>
+    <fullyQualifiedTypeName name="com.mgestionProduit.dto.LivraisonDTO"/>
+    <fullyQualifiedTypeName name="com.mgestionProduit.mapper.LivraisonMapper"/>
+    <fullyQualifiedTypeName name="com.mgestionProduit.services.ILivraisonService"/>
+    <fullyQualifiedTypeName name="com.mgestionProduit.mapper.ILivraisonMapper"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="com.mgestionProduit.mapper.IProduitMapper"/>
+    <fullyQualifiedTypeName name="com.mgestionProduit.dto.ProduitDTO"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
 </qualifiedTypeNameHistroy>
