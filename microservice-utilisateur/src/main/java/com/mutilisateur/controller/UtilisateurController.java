@@ -2,6 +2,7 @@ package com.mutilisateur.controller;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -13,7 +14,9 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.mutilisateur.DTO.UtilisateurDTO;
 import com.mutilisateur.entity.Utilisateur;
+import com.mutilisateur.mapper.IUtilisateurMapper;
 import com.mutilisateur.service.IUtilisateurService;
 
 @CrossOrigin
@@ -22,22 +25,19 @@ public class UtilisateurController {
 
 	@Autowired
 	IUtilisateurService utilisateurService;
+	@Autowired
+	IUtilisateurMapper utilisateurMapper;
 	
 	@PostMapping("/utilisateurs")
-	public Utilisateur save(@RequestBody Utilisateur utilisateur) {
-		return utilisateurService.saveUtilisateur(utilisateur);
+	public UtilisateurDTO save(@RequestBody Utilisateur utilisateur) {
+		return utilisateurMapper.convertToUtilisateurDTO(utilisateurService.saveUtilisateur(utilisateur));
 	}
 	
 	@GetMapping("/utilisateurs")
-	public List<Utilisateur> findUtilisateurs(){
-		return utilisateurService.findUtilisateurs();
+	public List<UtilisateurDTO> findUtilisateurs(){
+		return (List<UtilisateurDTO>) utilisateurService.findUtilisateurs().stream().map(e-> utilisateurMapper.convertToUtilisateurDTO(e))
+				.collect(Collectors.toList());
 	}
-
-	//pris exemple sur Louise pas d'optional (previous: UtilisateurServiceImpl.java)
-//	@GetMapping("/utilisateur/{id}")
-//	public Optional<Utilisateur> findUtilisateurById(@PathVariable("id") Long id){
-//		return utilisateurService.findUtilisateurById(id);
-//	}
 
 
 	@DeleteMapping("/utilisateurs/{id}")
@@ -46,7 +46,7 @@ public class UtilisateurController {
 	}
 
 	@PutMapping("/utilisateurs/{id}")
-	public Utilisateur updateUtilisateur(@PathVariable("id") Long id, @RequestBody Utilisateur utilisateur) {
+	public UtilisateurDTO updateUtilisateur(@PathVariable("id") Long id, @RequestBody Utilisateur utilisateur) {
 		Utilisateur currentUtilisateur = utilisateurService.findUtilisateur(id);
 		currentUtilisateur.setNomUtilisateur(utilisateur.getNomUtilisateur());
 		currentUtilisateur.setPrenomUtilisateur(utilisateur.getPrenomUtilisateur());
@@ -57,7 +57,7 @@ public class UtilisateurController {
 		currentUtilisateur.setVilleUtilisateur(utilisateur.getVilleUtilisateur());
 		currentUtilisateur.setAdresseUtilisateur(utilisateur.getAdresseUtilisateur());
 		currentUtilisateur.setRoleUtilisateur(utilisateur.getRoleUtilisateur());
-		return utilisateurService.saveUtilisateur(currentUtilisateur);
+		return utilisateurMapper.convertToUtilisateurDTO(utilisateurService.saveUtilisateur(currentUtilisateur));
 	}
 	
 }

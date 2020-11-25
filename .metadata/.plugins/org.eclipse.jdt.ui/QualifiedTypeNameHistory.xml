@@ -35,4 +35,11 @@
     <fullyQualifiedTypeName name="com.clientui.beans.PrestationBean"/>
     <fullyQualifiedTypeName name="com.clientui.beans.SalonBean"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.CrossOrigin"/>
+    <fullyQualifiedTypeName name="com.mreclamation.mapper.IReclamationMapper"/>
+    <fullyQualifiedTypeName name="com.mreclamation.DTO.ReclamationDTO"/>
+    <fullyQualifiedTypeName name="com.mreclamation.mapper.IAvisMapper"/>
+    <fullyQualifiedTypeName name="com.mreclamation.DTO.AvisDTO"/>
+    <fullyQualifiedTypeName name="com.mutilisateur.mapper.IUtilisateurMapper"/>
+    <fullyQualifiedTypeName name="com.mutilisateur.DTO.UtilisateurDTO"/>
+    <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
 </qualifiedTypeNameHistroy>

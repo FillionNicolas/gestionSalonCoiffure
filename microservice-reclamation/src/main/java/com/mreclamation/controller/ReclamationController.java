@@ -1,6 +1,7 @@
 package com.mreclamation.controller;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -12,7 +13,9 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.mreclamation.DTO.ReclamationDTO;
 import com.mreclamation.entities.Reclamation;
+import com.mreclamation.mapper.IReclamationMapper;
 import com.mreclamation.service.IReclamationService;
 
 @CrossOrigin
@@ -21,20 +24,24 @@ public class ReclamationController {
 	
 	@Autowired
 	IReclamationService reclamationService;
+	@Autowired
+	IReclamationMapper reclamationMapper;
+	
 	
 	@GetMapping("/reclamations")
-	public List<Reclamation> findAllReclamation() {
-		return reclamationService.findAllReclamation();
+	public List<ReclamationDTO> findAllReclamation() {
+		return  (List<ReclamationDTO>)reclamationService.findAllReclamation().stream().map(e-> reclamationMapper.convertToReclamationDTO(e))
+				.collect(Collectors.toList());
 	}
 	
 	@GetMapping("/reclamations/{id}")
-	public Reclamation findOneReclamation(@PathVariable("id") Long idReclamation) {
-		return reclamationService.findOneReclamation(idReclamation);
+	public ReclamationDTO findOneReclamation(@PathVariable("id") Long idReclamation) {
+		return reclamationMapper.convertToReclamationDTO(reclamationService.findOneReclamation(idReclamation));
 	}
 	
 	@PostMapping("/reclamations")
-	public Reclamation saveReclamation(@RequestBody Reclamation reclamation) {
-		return reclamationService.saveReclamation(reclamation);
+	public ReclamationDTO saveReclamation(@RequestBody Reclamation reclamation) {
+		return reclamationMapper.convertToReclamationDTO(reclamationService.saveReclamation(reclamation));
 	}
 	
 	@DeleteMapping("/reclamations/{id}")
@@ -43,12 +50,12 @@ public class ReclamationController {
 	}
 	
 	@PutMapping("/reclamations/{id}")
-	public Reclamation updateReclamation(@RequestBody Reclamation reclamation, @PathVariable("id") Long idReclamation) {
+	public ReclamationDTO updateReclamation(@RequestBody Reclamation reclamation, @PathVariable("id") Long idReclamation) {
 		Reclamation currentReclamation = reclamationService.findOneReclamation(idReclamation);
 		currentReclamation.setTitre(reclamation.getTitre());
 		currentReclamation.setDescription(reclamation.getDescription());
 		currentReclamation.setIdUtilisateur(reclamation.getIdUtilisateur());
-		return reclamationService.saveReclamation(currentReclamation);
+		return reclamationMapper.convertToReclamationDTO(reclamationService.saveReclamation(currentReclamation));
 	}
 
 }

@@ -1,6 +1,7 @@
 package com.mreclamation.controller;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -12,7 +13,9 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.mreclamation.DTO.AvisDTO;
 import com.mreclamation.entities.Avis;
+import com.mreclamation.mapper.IAvisMapper;
 import com.mreclamation.service.IAvisService;
 
 @CrossOrigin
@@ -21,20 +24,23 @@ public class AvisController {
 	
 	@Autowired
 	IAvisService avisService;
+	@Autowired
+	IAvisMapper avisMapper;
 	
 	@GetMapping("/avis")
-	public List<Avis> findAll(){
-		return avisService.findAllAvis();
+	public List<AvisDTO> findAll(){
+		return (List<AvisDTO>) avisService.findAllAvis().stream().map(e-> avisMapper.convertToAvisDTO(e))
+				.collect(Collectors.toList());
 	}
 	
 	@GetMapping("/avis/{idAvis}")
-	public Avis findOne(@PathVariable("idAvis") Long idAvis) {
-		return avisService.findOneAvis(idAvis);
+	public AvisDTO findOne(@PathVariable("idAvis") Long idAvis) {
+		return avisMapper.convertToAvisDTO(avisService.findOneAvis(idAvis));
 	}
 	
 	@PostMapping("/avis")
-	public Avis saveAvis(@RequestBody Avis avis) {
-		return avisService.saveAvis(avis);
+	public AvisDTO saveAvis(@RequestBody Avis avis) {
+		return avisMapper.convertToAvisDTO(avisService.saveAvis(avis));
 		
 	}
 	
@@ -43,13 +49,14 @@ public class AvisController {
 		avisService.deleteAvis(idAvis);
 	}
 	
+
 	@PutMapping("/avis/{idAvis}")
-	public Avis updateAvis(@PathVariable("idAvis") Long idAvis, @RequestBody Avis avis) {
+	public AvisDTO updateAvis(@PathVariable("idAvis") Long idAvis, @RequestBody Avis avis) {
 		Avis currentAvis = avisService.findOneAvis(idAvis);
 		currentAvis.setTitre(avis.getTitre());
 		currentAvis.setDescription(avis.getDescription());
 		currentAvis.setIdUtilisateur(avis.getIdUtilisateur());
-		return avisService.saveAvis(currentAvis);
+		return avisMapper.convertToAvisDTO(avisService.saveAvis(currentAvis));
 	}
 
 }
