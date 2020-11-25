@@ -15,52 +15,52 @@ import com.clientui.beans.CommandeBean;
 import com.clientui.beans.LivraisonBean;
 import com.clientui.beans.ProduitBean;
 
-@FeignClient(name = "microservice-gestionProduit")
+@FeignClient(name = "zuul-server")
 @RibbonClient(name = "microservice-gestionProduit")
 public interface MicroServiceProduitProxies {
 
-	@GetMapping(value = "/produits")
+	@GetMapping(value="microservice-gestionProduit/produits")
 	List<ProduitBean> findAll();
-
+	
+	@GetMapping("/commandes")
+	List<CommandeBean> findAllCommande();
+	
+	@GetMapping("/livraisons")
+	List<LivraisonBean> findAllLivraisons();
+	
 	@GetMapping("/produits/{id}")
 	public ProduitBean findOne(@PathVariable("id") Long id);
-
-	@PostMapping("/produits")
-	public ProduitBean saveProduit(@RequestBody ProduitBean produit);
-
-	@PutMapping("/produits/{id}")
-	public ProduitBean updateProduit(@RequestBody ProduitBean produit, @PathVariable("id") Long id);
-
-	@DeleteMapping("/produits/{id}")
-	void deleteProduit(@PathVariable("id") Long id);
-
 	
-	@PostMapping(value = "/commandes")
-	CommandeBean saveCommande(@RequestBody CommandeBean commandeBean );
-
-	@DeleteMapping(value = "/commandes/{id}")
-	CommandeBean deleteCommande(@PathVariable("id") Long id);
-	
-	@GetMapping(value = "/commandes")
-	List<CommandeBean> findAllCommande();
-
 	@GetMapping("/commandes/{id}")
 	public CommandeBean findOneCommande(@PathVariable("id") Long id);
-
-	
-	@PostMapping("/livraisons")
-	public LivraisonBean saveLivraison(@RequestBody LivraisonBean livraison);
-
-	@DeleteMapping("/livraisons/{id}")
-	void deleteLivraison(@PathVariable("id") Long id);
-	
-	@GetMapping(value = "/livraisons")
-	List<LivraisonBean> findAllLivraisons();
-
+		
 	@GetMapping("/livraisons/{id}")
 	public LivraisonBean findOneLivraisons(@PathVariable("id") Long id);
 	
+	@PostMapping("/livraisons")
+	public LivraisonBean saveLivraison( @RequestBody LivraisonBean livraison);
+	
+	@PostMapping("/produits")
+	public ProduitBean saveProduit(@RequestBody ProduitBean produit);
+	
+	@PostMapping("/commandes")
+	public CommandeBean saveCommande (@RequestBody CommandeBean commandeBean );
+	
+	@PutMapping("/produits/{id}")
+	public ProduitBean updateProduit(ProduitBean produit, @PathVariable("id") Long id);
 
+	@PutMapping("/commandes/{id}")
+	public CommandeBean updateCommande (CommandeBean commande, @PathVariable("id") Long id);
 
-
+	@PutMapping("/livraisons/{id}")
+	public LivraisonBean updateLivraison(LivraisonBean livraison, @PathVariable("id") Long id);
+	
+	@DeleteMapping("/produits/{id}")
+	void deleteProduit(@PathVariable("id") Long id);
+	
+	@DeleteMapping("/commandes/{id}")
+	void deleteCommande( @PathVariable("id") Long id);
+	@DeleteMapping("/livraisons/{id}")
+	void deleteLivraison(@PathVariable("id") Long id);
+	
 }
