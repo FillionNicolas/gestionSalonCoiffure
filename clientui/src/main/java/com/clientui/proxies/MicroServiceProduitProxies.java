@@ -15,7 +15,7 @@ import com.clientui.beans.CommandeBean;
 import com.clientui.beans.LivraisonBean;
 import com.clientui.beans.ProduitBean;
 
-@FeignClient(name = "zuul-server")
+@FeignClient(name = "microservice-gestionProduit")
 @RibbonClient(name = "microservice-gestionProduit")
 public interface MicroServiceProduitProxies {
 
