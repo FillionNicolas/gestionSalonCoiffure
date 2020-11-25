@@ -9,15 +9,17 @@ import com.mgestion_rdv.entity.Salon;
 public class ReservationDTO {
 	private Long idReservation;
 	private Date dateReservation;
-	
+	private long idUtilisateur;
 	private List<Prestation> prestations;
 	private List<Salon> salons;
 	
-	
-	public ReservationDTO(Long idReservation, Date dateReservation, List<Prestation> prestations, List<Salon> salons) {
+
+	public ReservationDTO(Long idReservation, Date dateReservation, long idUtilisateur, List<Prestation> prestations,
+			List<Salon> salons) {
 		super();
 		this.idReservation = idReservation;
 		this.dateReservation = dateReservation;
+		this.idUtilisateur = idUtilisateur;
 		this.prestations = prestations;
 		this.salons = salons;
 	}
@@ -35,6 +37,12 @@ public class ReservationDTO {
 	}
 	public void setDateReservation(Date dateReservation) {
 		this.dateReservation = dateReservation;
+	}
+	public long getIdUtilisateur() {
+		return idUtilisateur;
+	}
+	public void setIdUtilisateur(long idUtilisateur) {
+		this.idUtilisateur = idUtilisateur;
 	}
 	public List<Prestation> getPrestations() {
 		return prestations;

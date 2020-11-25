@@ -55,6 +55,7 @@ public class ReservationController {
 		Reservation currentReservation = reservationService.findOneReservation(idReservation);
 		currentReservation.setIdReservation(reservation.getIdReservation());
 		currentReservation.setDateReservation(reservation.getDateReservation());
+		currentReservation.setIdUtilisateur(reservation.getIdUtilisateur());
 		return reservationMapper.convertToReservationDTO(reservationService.saveReservation(currentReservation));
 	}
 			

@@ -19,6 +19,7 @@ public class Reservation implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idReservation;
 	private Date dateReservation;
+	private long idUtilisateur;
 	
 	@OneToMany(mappedBy = "reservation")
 	private List<Prestation> prestations;
@@ -26,10 +27,13 @@ public class Reservation implements Serializable{
 	@OneToMany(mappedBy = "reservation")
 	private List<Salon> salons;
 
-	public Reservation(Long idReservation, Date dateReservation, List<Prestation> prestations, List<Salon> salons) {
+
+	public Reservation(Long idReservation, Date dateReservation, long idUtilisateur, List<Prestation> prestations,
+			List<Salon> salons) {
 		super();
 		this.idReservation = idReservation;
 		this.dateReservation = dateReservation;
+		this.idUtilisateur = idUtilisateur;
 		this.prestations = prestations;
 		this.salons = salons;
 	}
@@ -73,6 +77,14 @@ public class Reservation implements Serializable{
 
 	public void setSalons(List<Salon> salons) {
 		this.salons = salons;
+	}
+
+	public long getIdUtilisateur() {
+		return idUtilisateur;
+	}
+
+	public void setIdUtilisateur(long idUtilisateur) {
+		this.idUtilisateur = idUtilisateur;
 	}
 
 	@Override

@@ -23,14 +23,9 @@ public class Commande implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 
 	private Long idCommande;
-	
-
 	private Date dateAchat;
-
 	private float prix;
-	
 	private long idUtilisateur;
-	
 	
 	@ManyToOne
 	private Livraison livraison;
@@ -40,8 +35,6 @@ public class Commande implements Serializable {
 	
 	public Commande() {}
 
-	
-
 	public Commande(Long idCommande, Date dateAchat, float prix, Livraison livraison, List<Produit> produits, long idUtilisateur) {
 		super();
 		this.idCommande = idCommande;
@@ -49,6 +42,7 @@ public class Commande implements Serializable {
 		this.prix = prix;
 		this.livraison = livraison;
 		this.produits = produits;
+		this.idUtilisateur=idUtilisateur;
 	}
 
 
